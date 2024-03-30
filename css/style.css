@@ -93,6 +93,13 @@ section{
     z-index: 1000;
 }
 
+.header h1{
+    margin-left: 7rem;
+    position: absolute;
+    font-size: 2rem;
+    cursor:default;
+}
+
 .header .logo{
     font-size: .5rem;
     text-align: center;
@@ -230,21 +237,18 @@ section{
 .about{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: space-between;
 }
 
 .about .image{
-    flex: 1 1 41rem;
+    flex: 1;
 }
 
 .about .image img{
     width: 100%;
 }
 
-.about .content{
-    flex: 1 1 41rem;
-}
 
 .about .content .title{
     font-size: 3rem;
@@ -439,6 +443,9 @@ section{
 /*Media Queries*/
 
 @media (max-width:1200px){
+    .about{
+        flex-direction: column;
+    }
 
     section{
         padding: 3rem 5%;
@@ -457,10 +464,12 @@ section{
     .home .slide .content h3{
         font-size: 15vw;
     }
+
 }
 
 
 @media (max-width:768px){
+
 
     #menu-btn{
         display: inline-block;
@@ -495,6 +504,10 @@ section{
 }
 
 @media (max-width:450px){
+        .header h1{
+        display: none;
+    }
+    
 
     html{
         font-size: 50%;
